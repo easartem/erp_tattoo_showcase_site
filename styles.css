@@ -16,6 +16,19 @@
     --link-color-dark: #1e0b2b;
 }
 
+@font-face {
+    font-family: 'Centrion';
+    src: url(fonts/Centrion/centrion.ttf) ormat('ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Halfomania';
+    src: url(fonts/Halfomania/Halfomania-Regular.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
 body {
     background-image: url(images/night_stars_bg.jpg); /* Replace with the path to your image */
     background-size: cover; /* Ensures the image covers the entire background */
@@ -26,6 +39,12 @@ body {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
     padding: 20px;
+    font-family: "Centrion";
+}
+
+h1 {
+    font-size: x-large;
+    color: var(--primary-color-dark);
 }
 
 .grid figure img{
