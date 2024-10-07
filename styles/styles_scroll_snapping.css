@@ -1,0 +1,130 @@
+/*-------------------------------Dark Theme --------------------------------*/
+
+:root {
+    --primary-color-dark: #b6ff6b;
+    --secondary-color-dark: #f0ff4a;
+
+    --accent-color-dark: #9d00ff;
+    --accent-bg-color-dark: #9d00ff;
+    --accent-text-color-dark: #9d00ff;
+
+    --neutral-color-dark: #121212;
+    --neutral-bg-color-dark: #f5f5f5;
+    --neutral-text-color-dark: #eceff1;
+
+    --text-color-dark: #f5f5f5;
+    --bg-color-dark: #121212;
+    --link-color-dark: #1e0b2b;
+}
+
+@font-face {
+    font-family: 'Centrion';
+    src: url(fonts/Centrion/centrion.ttf) ormat('ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Halfomania';
+    src: url(fonts/Halfomania/Halfomania-Regular.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+/*-------------------------------Styles généraux --------------------------------*/
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    /* Hauteur pour simuler le défilement (zoom)*/
+    /* height: 100vh;  */
+    background: 
+    /* Grille de base (fine) */
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 0) repeat,
+    linear-gradient(0deg, rgba(255,255,255,0.1) 1px, transparent 0) repeat;
+    /* Taille de la grille */
+    background-size: 100px 100px;
+    /* Couleur par défaut */
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    /* Police par défaut*/
+    font-family: "Gemunu Libre";
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+} */
+
+/* Gestion des polices par défaut */
+.text-title {
+    font-family: "Centrion";
+}
+.text-subtitle {
+    font-family: "Gemunu Libre";
+}
+.text-body {
+    font-family: "Roboto";
+}
+.text-accent {
+    font-family: "Gemunu Libre";
+}
+
+/*-------------------------------Styles du body --------------------------------*/
+
+/* .container > section {
+    text-align: center;
+    scroll-snap-align: start;
+    flex: none;
+  } */
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: scroll;          /* Permettre le défilement vertical sur le body */
+    scroll-snap-type: y mandatory; /* Appliquer le scroll snapping vertical au body */
+}
+
+header, footer {
+    height: 10vh;               /* Hauteur du header et du footer */
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    scroll-snap-type: none;
+}
+
+.hero-section {
+    height: 90vh;   
+    scroll-snap-type: none;
+}
+
+.snap-scroll-section {
+    height: 100vh;               /* Chaque section occupe 100% de la hauteur de la fenêtre */
+    scroll-snap-align: start;    /* Appliquer le snapping uniquement aux sections */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+
+.section1 { background-color: lightcoral; }
+.section2 { background-color: lightseagreen; }
+.section3 { background-color: lightskyblue; }
+
+
