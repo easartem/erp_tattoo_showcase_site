@@ -105,12 +105,16 @@ header, footer {
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    scroll-snap-type: none;
 }
 
 .hero-section {
     height: 90vh;   
-    scroll-snap-type: none;
+    scroll-margin: 10vh;
+    scroll-snap-type: center;
+    scroll-snap-align: start; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .snap-scroll-section {
