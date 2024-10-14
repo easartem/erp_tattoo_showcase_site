@@ -1,6 +1,4 @@
 /*-------------------------------Dark Theme --------------------------------*/
-@layer base, rhythm, layout, components, default, overwrites;
-
 :root {
     --primary-color-dark: #b6ff6b;
     --secondary-color-dark: #f0ff4a;
@@ -60,10 +58,33 @@ body {
     padding: 0;
 }
 
+/* Gestion des polices par défaut */
+.text-title {
+    font-family: "Centrion";
+}
+.text-subtitle {
+    font-family: "Gemunu Libre";
+}
+.text-body {
+    font-family: "Roboto";
+}
+.text-accent {
+    font-family: "Gemunu Libre";
+}
+
+
 /*-------------------------------Styles du body --------------------------------*/
 
+header {
+    height: 20vh;               /* Hauteur du header et du footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 100px 50px;
+}
 
-header, footer {
+footer {
     height: 10vh;               /* Hauteur du header et du footer */
     background-color: darkslategray;
     color: white;
@@ -75,7 +96,8 @@ header, footer {
 }
 
 .hero-section {
-    height: 90vh;   
+    height: 80vh;  
+    background-color: darkslategray; 
 }
 
 .snap-scroll-section {
@@ -85,6 +107,35 @@ header, footer {
     color: white;
 }
 
+/*-------------------------------HEADER --------------------------------*/
+
+h1 {
+    font-family: "Centrion";
+    font-size: 100px;
+    color: var(--primary-color-dark);
+}
+
+.button-container {
+    position: relative;
+    display: inline-block;
+  }
+
+.round-button {
+    background-color: var(--accent-bg-color-dark);
+    border-radius: 50%;
+    border: none;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    z-index: 1;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
 
 /*-------------------------------EYE ZOOM SECTION --------------------------------*/
 

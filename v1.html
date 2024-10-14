@@ -13,6 +13,7 @@
 </head>
 
 <body> 
+    <!-------------------------------HEADER -------------------------------->
     <header  class="d-flex flex-row justify-content-between">
         <div>
             <h1>La Flemme</h1>
@@ -23,19 +24,15 @@
         </button>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+
+    <!-------------------------------HERO SECTION -------------------------------->
     <section class="hero-section">
         <h2>Section de présentation</h2>
         <p>“Nous aidons les artistes à se focaliser sur leur art en gérant pour eux les réservations.” </p>
     </section>
 
 
+    <!-------------------------------ZOOM EYE -------------------------------->
     <section class="section-zoom">
         <div class="zoom-image-container">
             <img src="images/perfect_eyeball.png" alt="Œil" class="eye-image">
@@ -45,9 +42,12 @@
         </div>
     </section>
 
+
+    <!-------------------------------SERVICES -------------------------------->
     <section class="snap-scroll-section section-service">
         <section class="caroussel service-1">
             <div class="content-service">
+                <img src="images\website_laptop_mockup.png" alt="exemple de site créé">
                 <h2>1. Site Vitrine Personnalisé</h2>
                 <p>Montrez votre talent avec un site web qui vous ressemble.</p> 
                 <div>
@@ -88,10 +88,13 @@
                     </ul> 
                 </div>  
                 <p>Nous vous aidons à développer votre notoriété et à capter l'attention de votre public cible.</p>  
+                <button class="cta">Call to action</button>
             </div>
         </section>
     </section>
 
+
+    <!-------------------------------GAIN SECTION -------------------------------->
     <section class="snap-scroll-section section3 grid grid-1">
         <h2>Section bénéfices</h2>
         <p>Pourquoi choisir La Flemme ?</p>
@@ -151,9 +154,31 @@
         <p>Notre processus</p>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Mon site web</p>
-    </footer>
-</body>
 
+    <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <!-- brand -->
+          </div>
+          <nav class="footer-nav">
+            <div class="footer-nav-item"><a href="#">Overview</a></div>
+            <div class="footer-nav-item"><a href="#">Features</a></div>
+            <div class="footer-nav-item"><a href="#">Pricing</a></div>
+            <div class="footer-nav-item"><a href="#">Careers</a></div>
+            <div class="footer-nav-item"><a href="#">Help</a></div>
+          </nav>
+          <div class="footer-legal">
+            <div class="footer-text">
+              © 2024 Themex. All rights reserved.
+              <p>&copy; 2024 Mon site web</p>
+            </div>
+            <div class="footer-links">
+              <div class="footer-links-item"><a href="#">Terms</a></div>
+              <div class="footer-links-item"><a href="#">Privacy</a></div>
+              <div class="footer-links-item"><a href="#">Cookies</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
 </html>
