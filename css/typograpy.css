@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Centrion';
+    src: url(fonts/Centrion/centrion.ttf) ormat('ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Halfomania';
+    src: url(fonts/Halfomania/Halfomania-Regular.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Futuria';
+    src: url(fonts/Futuria/futuristic_cap_font.otf) format('otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Gestion des polices par défaut */
+.text-title {
+    font-family: "Centrion";
+}
+.text-subtitle {
+    font-family: "Futuria";
+}
+.text-basic {
+    font-family: "Gemunu Libre";
+}
+.text-accent {
+    font-family: "Futuria";
+}
+
+
+* {
+    /* Step 1: Establish individual responsive font-size 
+    Min and max font sizes to screen sizes 
+    That is, font size will be 16px at 320px screen width and 20px at 1440px screen width
+    These values can be customized on each element to automatically update the formula
+    */
+    --font-size-min: 16;
+    --font-size-max: 20;
+    --font-size-min-viewport: 320;
+    --font-size-max-viewport: 1440;
+
+    /* 
+    Converting from px to rem automatically for convenience and accessibility
+    If you want to set font-sizes in rem units from the start, you can set --font-size-units to 1rem
+    Default 1rem = 16px, so 1px = 0.0625rem 
+    */
+    --font-size-units: calc(0.0625rem);
+
+    --_font-size-step: calc((var(--font-size-max) - var(--font-size-min)) / (var(--font-size-max-viewport) - var(--font-size-min-viewport)));
+
+    --_font-size-base-value: calc(var(--font-size-min) - var(--font-size-min-viewport) * var(--_font-size-step));
+
+    --font-size: clamp(
+    min(var(--font-size-min), var(--font-size-max)) * var(--font-size-units),
+    var(--_font-size-base-value) * var(--font-size-units) + var(--_font-size-step) * 100vw,
+    max(var(--font-size-max), var(--font-size-min)) * var(--font-size-units)
+    );
+
+    /* Using ems to lock current line-height to current font-size */
+    --line-height-units: 1em;
+
+    /* Min and max line-height */
+    --line-height-min: 1.2;
+    --line-height-max: 1.6;
+
+    /* Same viewport boundaries as font-size, using font-size values to convert from pixels */
+    --line-height-min-viewport: calc(320 / var(--font-size-min));
+    --line-height-max-viewport: calc(1440 / var(--font-size-max));
+
+    /* You know the drill. No touchy. */
+    --_line-height-step: calc((var(--line-height-max) - var(--line-height-min)) / (var(--line-height-max-viewport) - var(--line-height-min-viewport)));
+
+    --_line-height-base-value: calc(var(--line-height-min) - var(--line-height-min-viewport) * var(--_line-height-step));
+
+    /* 
+    Just like with --font-size, all elements will now have access to responsive line-height
+    And we can tweak the values established above such as --line-height-min and --line-height-max
+    */
+    --line-height: clamp(
+    min(var(--line-height-min), var(--line-height-max)) * var(--line-height-units),
+    var(--_line-height-base-value) * var(--line-height-units) + var(--_line-height-step) * 100vw,
+    max(var(--line-height-max), var(--line-height-min)) * var(--line-height-units)
+    );
+}
+
+body {
+    /* We can now set font-size and line-height to their respective props */
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+/*-------------------------------HEADER --------------------------------*/
+
+h1 {
+    font-family: "Centrion";
+    /* font-size: 100px; */
+    color: var(--primary-color-dark);
+}

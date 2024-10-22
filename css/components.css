@@ -1,0 +1,38 @@
+.button-container {
+    position: relative;
+    display: inline-block;
+  }
+
+.round-button {
+    background-color: var(--accent-bg-color-dark);
+    border-radius: 50%;
+    border: none;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    z-index: 1;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+.cta {
+    background-color: var(--primary-color-dark);
+    color:var(--neutral-color-dark);
+    border-style: none;
+    border-radius: 10px;
+    display: inline-block;
+    transition: color 100ms;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.cta:hover,
+.cta:focus {
+  background-color: #F082AC;
+}

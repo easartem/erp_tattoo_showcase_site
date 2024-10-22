@@ -57,27 +57,27 @@ window.addEventListener("load", () => {
 
 
 // Timeline pour contrôler le défilement des services
-const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".section-service",  // La section parent des services
-      snap: 0.5,
-      start: "top top",             // Commence dès le début de la section
-      end: "+=200%",         // Continue jusqu'à la fin de la section
-      scrub: true,                  // L'animation est synchronisée avec le défilement
-      pin: true,                    // Épingler la section pendant la durée du scroll
-      anticipatePin: 1,             // Ajuster légèrement l'anticipation du pinning
-      markers: true                 // Activer pour voir les marqueurs lors du débogage
-    }
-  });
+// const tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".section-service",  // La section parent des services
+//       snap: 0.5,
+//       start: "top top",             // Commence dès le début de la section
+//       end: "+=200%",         // Continue jusqu'à la fin de la section
+//       scrub: true,                  // L'animation est synchronisée avec le défilement
+//       pin: true,                    // Épingler la section pendant la durée du scroll
+//       anticipatePin: 1,             // Ajuster légèrement l'anticipation du pinning
+//       markers: true                 // Activer pour voir les marqueurs lors du débogage
+//     }
+//   });
   
-  // Étapes de la timeline
-  tl.call(() => showSelectedChild('.section-service', 0))  // Affiche service 1
-    .to({}, { duration: 1 })  // Temps de transition avant d'activer la suivante
+  // // Étapes de la timeline
+  // tl.call(() => showSelectedChild('.section-service', 0))  // Affiche service 1
+  //   .to({}, { duration: 1 })  // Temps de transition avant d'activer la suivante
   
-    .call(() => showSelectedChild('.section-service', 1))  // Affiche service 2
-    .to({}, { duration: 1 })  // Temps de transition avant d'activer la suivante
+  //   .call(() => showSelectedChild('.section-service', 1))  // Affiche service 2
+  //   .to({}, { duration: 1 })  // Temps de transition avant d'activer la suivante
   
-    .call(() => showSelectedChild('.section-service', 2)); // Affiche service 3
+  //   .call(() => showSelectedChild('.section-service', 2)); // Affiche service 3
 
     // Animation pour chaque slide
     // gsap.utils.toArray(".caroussel").forEach((section) => {

@@ -1,0 +1,164 @@
+/*-------------------------------Styles du body --------------------------------*/
+
+header {
+    height: 20vh;               /* Hauteur du header et du footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 1.2em; */
+    padding: 100px 50px;
+}
+
+footer {
+    height: 10vh;               /* Hauteur du header et du footer */
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 1.5em; */
+}
+
+.hero-section {
+    height: 80vh;  
+    background-color: darkslategray; 
+}
+
+.snap-scroll-section {
+    height: 100vh;             
+    width:100%;
+    /* font-size: 2em; */
+    color: white;
+}
+
+/*-------------------------------EYE ZOOM SECTION --------------------------------*/
+
+
+/* Le conteneur parent doit avoir position: relative */
+.section-zoom {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Les deux conteneurs doivent être en position absolue pour se superposer */
+.zoom-image-container, .zoom-content-container { 
+    position: absolute;          /* Position absolue pour superposer */
+    top: 0;                      /* Aligner en haut */
+    left: 0;                     /* Aligner à gauche */
+    height: 100vh;               /* Prendre toute la hauteur de la fenêtre */
+    width: 100%;                 /* Prendre toute la largeur */
+    display: flex;               /* Centrage avec Flexbox */
+    justify-content: center;     /* Centrer horizontalement */
+    align-items: center;         /* Centrer verticalement */
+    z-index: 1;                  /* Superposition par ordre de couche (par défaut 1) */
+}
+
+/* Si tu veux que l'un des conteneurs soit au-dessus de l'autre, ajuste le z-index */
+.zoom-image-container {
+    z-index: 2;                  
+}
+
+.zoom-content-container {
+    opacity: 0;
+}
+
+.zoom-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+/*-------------------------------CAROUSSEL SERVICE SECTION --------------------------------*/
+
+.section-service {
+    position: relative;
+    height: 100vh;                
+    width:100%;
+}
+
+.caroussel {
+    position: absolute;
+    height: 100vh;  
+    width:100%;            
+    justify-content: center;
+    display: block;
+    align-items: center;
+}
+
+/* Style de base pour la section */
+.content-service {
+    height: 100vh;
+    width:100%;
+    display: flex;
+    flex-direction: row-reverse; /* Deux colonnes (par défaut sur grand écran) */
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding: 5%;
+}
+
+.responsive-content-image {
+    width: 50%;
+}
+
+.responsive-content-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: start;
+    flex: 1;
+}
+
+/* Ajustement du style de l'image */
+.caroussel .responsive-content-image img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas de son conteneur */
+    height: auto;
+}
+
+
+/*-------------------------------GAINS SECTIONS --------------------------------*/
+.section-gain {
+    position: relative;
+    height: 200vh;                
+    width:100%;
+}
+
+#sich-fig {
+    width: 100%;
+    max-width: 800px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#ball-fig {
+    width: 100%;
+    max-width: 400px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-2 figure img{
+    width: auto;
+    height: 100%;
+    max-height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#hourglass {
+    transform: rotate(-25deg);
+}
+
+
+
+
+
+
